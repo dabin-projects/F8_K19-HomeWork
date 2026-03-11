@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ORDERS PAGE</title>
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/theme.css" />
+    </head>
+    <body>
+        <h1 style="color: darkorchid">ORDERS PAGE</h1>
+
+        <!--
+        Phần tử này có: tag(h2) + class(.title) + id(#special) + inline style
+
+        CSS áp dụng:
+        - h2 từ base.css
+        - .title từ base.css
+        - .title từ theme.css
+        - #special từ base.css
+        - inline style
+
+        Thứ tự ưu tiên:
+        inline style > ID > class > tag
+
+        Selector thắng: inline style
+
+        Lý do:
+        Inline style có độ ưu tiên cao nhất nên ghi đè tất cả các selector còn lại.
+
+        Màu hiển thị cuối: black
+        -->
+        <h2 class="title" id="special" style="color: black">
+            Danh sach don hang
+        </h2>
+        
+        <p style="color: orange">Don hang 001</p>
+        <p>Don hang 002</p>
+        <p class="highlight">Don hang 003</p>
+        <p class="highlight">Don hang 004</p>
+    </body>
+</html>

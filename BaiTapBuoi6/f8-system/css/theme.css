@@ -1,0 +1,15 @@
+/* Override class .title */
+.title {
+    color: blue
+;
+}
+
+/* Override h2 */
+h2 {
+    color: green;
+}
+
+/* Override id #special */
+#special {
+    color: gold;
+}

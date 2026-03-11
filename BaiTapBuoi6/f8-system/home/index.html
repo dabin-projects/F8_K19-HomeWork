@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home Page</title>
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/theme.css" />
+    </head>
+    <body>
+        <!--
+        Phần tử này có: tag(h1) + class(.title) + id(#main)
+
+        CSS áp dụng:
+        - h1 từ base.css
+        - .title từ base.css
+        - .title từ theme.css (override base.css)
+        - #main từ base.css
+
+        Selector thắng: #main
+
+        Lý do:
+        ID có độ ưu tiên cao hơn class và tag
+        (ID > Class > Tag)
+
+        Màu hiển thị cuối: màu của #main trong base.css (black)
+        -->
+        <h1 class="title" id="main">Home page</h1>
+
+        <h2 class="title">Gioi thieu he thong</h2>
+        <!-- --- h1 và h2 đều dùng .title nhưng màu có giống nhau không? Tại sao?
+     Không giống nhau. Đầu tiên, class (.title) trong theme.css đã override .title trong base.css. Nhưng vì h1 còn có thêm ID(#main) nên xét về độ ưu tiên thì ID > class > tag, do đó #main -> ưu tiên cao hơn .title -> h1 sẽ lấy màu từ #main, h2 sẽ lấy màu từ .title--- -->
+        
+     <h3>Cac khoa hoc noi bat</h3>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>Javascript</p>
+        <p>Python</p>
+    </body>
+</html>

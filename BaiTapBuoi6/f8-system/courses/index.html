@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Courses Page</title>
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/theme.css" />
+
+        <!-- Internal CSS để override -->
+
+        <style>
+            /* Override h1 */
+            h1 {
+                color: darkorange;
+            }
+
+            /* Override .section */
+            div.section {
+                background-color: darkblue;
+            }
+
+            /* Override p */
+            p.highlight {
+                font-size: 20px;
+                color: rgb(191, 236, 191);
+            }
+        </style>
+        <!-- Thứ tự ưu tiên trong file này sẽ là: base.css < theme.css < Internal CSS (style) -> Internal CSS được load sau nên sẽ override các style trước nếu selector phù hợp.-->
+    </head>
+    <body>
+        <h1>COURSES PAGE</h1>
+        <h2 class="title">Danh sach khoa hoc</h2>
+        <div class="section">
+            <!--
+            Phần tử này có: tag(p) + class(.highlight)
+
+            CSS áp dụng:
+            - p từ base.css
+            - .highlight từ base.css
+            - p.highlight từ Internal CSS
+
+            Selector thắng: p.highlight trong Internal CSS
+
+            Lý do:
+            Internal CSS được load sau và selector cụ thể hơn
+            (tag + class) nên override class highlight.
+
+            Màu hiển thị cuối: rgb(191, 236, 191)
+            Font-size: 20px
+            -->
+            <p class="highlight">HTML co ban</p>
+            <p class="highlight">CSS co ban</p>
+            <p class="highlight">Javascript nang cao</p>
+            <p class="highlight">ReactJS</p>
+            <p class="highlight">NodeJS</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TEACHERS PAGE</title>
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/theme.css" />
+        <!--
+        Internal CSS để override.
+
+        CSS áp dụng cho h3.section:
+        - h3 từ base.css
+        - .section từ base.css
+        - h3.section từ internal CSS
+
+        So sánh độ ưu tiên:
+        h3.section (tag + class) > .section (class) > h3 (tag)
+
+        Ngoài ra internal CSS nằm sau external CSS nên cũng ghi đè.
+
+        => Vì vậy h3.section sẽ có màu darkcyan.
+        -->
+        <style>
+            h3.section {
+                color: darkcyan;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>TEACHERS PAGE</h1>
+        <h2 class="title" id="special">Danh sach giang vien</h2>
+        <h3 class="section">Giang vien HTML</h3>
+        <h3 class="section">Giang vien CSS</h3>
+        <h3 class="section">Giang vien Javascript</h3>
+        <h3 class="section">Giang vien React</h3>
+    </body>
+</html>

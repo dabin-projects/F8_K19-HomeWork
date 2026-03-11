@@ -1,0 +1,42 @@
+/* Tag Selector */
+h1 {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+h3 {
+    color: green;
+}
+
+p {
+    color: purple;
+}
+
+/* Class Selector */
+.title {
+    color: orange;
+}
+
+.section {
+    color: brown;
+}
+
+.highlight {
+    color: pink;
+}
+
+.big {
+    color: teal;
+}
+
+/* ID Selector */
+#main {
+    color: black;
+}
+
+#special {
+    color: gray;
+}

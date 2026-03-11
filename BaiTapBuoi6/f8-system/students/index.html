@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>STUDENTS PAGE</title>
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/theme.css" />
+    </head>
+    <body>
+        <h1 id="main">STUDENTS PAGE</h1>
+        <h2 class="title">Danh sach hoc vien</h2>
+
+        <h3 class="title">Nhom 1</h3>
+        <p class="highlight">Nguyen Van A</p>
+        <p class="highlight">Tran Van B</p>
+
+        <h3 class="title">Nhom 2</h3>
+        <p class="highlight">Le Van C</p>
+
+        <!--
+        Phần tử này có: tag(p) + class(.highlight) + class(.big)
+
+        CSS áp dụng:
+        - p từ base.css
+        - .highlight từ base.css
+        - .big từ base.css
+
+        Selector thắng: phụ thuộc vào CSS định nghĩa nào sau.
+
+        Lý do:
+        .highlight và .big đều là class nên có cùng độ ưu tiên.
+        Khi specificity bằng nhau → CSS khai báo sau sẽ thắng.
+
+        Màu hiển thị cuối: màu của selector được khai báo sau (tức là màu teal của .big)
+        -->
+        <p class="highlight big">Pham Van D</p>
+    </body>
+</html>

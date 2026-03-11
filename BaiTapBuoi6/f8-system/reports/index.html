@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>REPORT PAGE</title>
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/theme.css" />
+    </head>
+    <body>
+        <h1>REPORT PAGE</h1>
+
+        <h2 class="title">Thong ke he thong</h2>
+
+        <div class="section" id="main">
+            <!--
+            Phần tử này có: tag(p) + class(.title)
+
+            CSS áp dụng:
+            - p từ base.css
+            - .title từ base.css
+            - .title từ theme.css
+
+            Selector thắng: .title (trong theme.css)
+
+            Lý do:
+            class > tag và theme.css ghi đè base.css.
+
+            Màu hiển thị cuối: màu của .title trong theme.css (blue)
+            -->
+            <p class="title">Tong so hoc vien</p>
+
+            <p class="big">Tong so khoa hoc</p>
+            <p>Tong so don hang</p>
+            <p class="highlight">Doanh thu</p>
+        </div>
+    </body>
+</html>
