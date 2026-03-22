@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modal</title>
+        <style>
+            body {
+                padding-top: 30px;
+            }
+
+            /* Để cả class overlay có display=none để ẩn mặc định khi vào trang, và hiện khi checkbox được check */
+            .overlay {
+                display: none;
+                height: 100vh;
+                padding-top: 30vh;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .modal {
+                margin: 100px auto;
+                width: 300px;
+                height: 200px;
+                background-color: #ffffff;
+                color: #333333;
+            }
+
+            .content {
+                padding: 30px;
+                text-align: center;
+            }
+
+            .open-btn {
+                background-color: #3b82f6;
+                color: #ffffff;
+                padding: 12px 24px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .close-btn {
+                width: 40px;
+                height: 10px;
+                margin-left: 60px;
+                background-color: #ef4444;
+                color: #ffffff;
+                text-align: center;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            /* Khi checkbox #modal-toggle được check (~) thì hiện overlay(bao gôm cả modal sẽ được hiển thị) */
+            #modal-toggle:checked ~ .overlay {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Ẩn checkbox -->
+        <input type="checkbox" id="modal-toggle" hidden />
+        <label for="modal-toggle" class="open-btn">Mở modal</label>
+
+        <!-- Overlay là label: khi click vào vùng tối bên ngoài sẽ toggle checkbox -->
+        <label for="modal-toggle" class="overlay">
+            <!-- Hộp modal -->
+
+            <div class="modal">
+                <p class="content">Đây là nội dung thông báo!</p>
+                <!-- Click nút này cũng toggle checkbox → đóng modal -->
+                <label for="modal-toggle" class="close-btn">Đóng</label>
+            </div>
+        </label>
+    </body>
+</html>
