@@ -1,0 +1,176 @@
+/* ===== RESET ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+/* ul {
+    list-style: none;
+} */
+
+/* ====== HEADER ====== */
+.header {
+    background-color: #ffffff;
+    border-bottom: 0.08rem solid #dddddd;
+    max-width: 75rem; /* Chiều rộng tối đa: 1200px */
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 0.5rem 1rem; /* 8px top/bottom */
+}
+
+/* ====== LOGO ====== */
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.5625rem; /* 25px */
+}
+
+.logo__img {
+    display: block;
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+/* ====== NAVIGATION ====== */
+.nav {
+    display: inline-block;
+}
+
+.menu {
+    display: inline-block;
+}
+
+/* Mỗi mục cấp 1 */
+.menu > li {
+    display: inline-block;
+    position: relative; /* Làm điểm neo cho dropdown bên trong */
+    margin-right: 1.5625rem; /* 25px */
+}
+
+.menu > li:last-child {
+    margin-right: 0;
+}
+
+/* Link cấp 1 */
+.menu > li > a {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9375rem; /* ~15px */
+    color: #333333;
+    padding: 0.375rem 0; /* 6px top/bottom */
+    border-bottom: 0.125rem solid transparent; /* 2px - placeholder để giữ layout */
+}
+
+/* Icon mũi tên xuống ▾ cho mục cấp 1 có submenu */
+.menu > li > a .arrow-down {
+    display: inline-block;
+    font-size: 0.625rem; /* 10px */
+    color: #555555;
+    margin-left: 0.1875rem; /* 3px */
+    vertical-align: middle;
+}
+
+/* Hover mục cấp 1:
+   Selector "li:hover > a" bao phủ toàn bộ vùng li (gồm cả dropdown bên trong)
+   → Mục cấp 1 GIỮ trạng thái active ngay cả khi chuột di chuyển xuống dropdown */
+.menu > li:hover > a {
+    color: #d62828;
+    border-bottom-color: #d62828;
+}
+
+/* ====================== DROPDOWN CẤP 1 ======================= */
+.dropdown {
+    display: none; /* Ẩn mặc định */
+    position: absolute;
+    top: 100%; /* Ngay bên dưới mục cha */
+    left: 0;
+    background: #ffffff;
+    border: 0.0625rem solid #dddddd; /* 1px */
+    min-width: 12.5rem; /* 200px */
+    /* z-index: 1; */
+}
+
+/* Hiện dropdown khi hover vào li cấp 1 */
+.menu > li:hover > .dropdown {
+    display: block;
+}
+
+/* Mỗi item trong dropdown cấp 1 */
+.dropdown > li {
+    position: relative; /* Làm điểm neo cho sub-menu */
+}
+
+/* Link item dropdown cấp 1 */
+.dropdown > li > a {
+    position: relative; /* Để arrow-right dùng absolute bên trong */
+    display: block;
+    padding: 0.5rem 2rem 0.5rem 0.625rem; /* 8px trên/dưới, 32px phải (chừa icon), 10px trái */
+    font-size: 0.875rem; /* 14px */
+    color: #333333;
+}
+
+/* Icon mũi tên phải ▸ cho mục có sub menu cấp 2 */
+.dropdown > li > a .arrow-right {
+    position: absolute;
+    right: 0.625rem; /* 10px cách bên phải */
+    top: 50%;
+    margin-top: -0.3125rem; /* -5px - căn giữa dọc */
+    font-size: 0.625rem; /* 10px */
+    color: #777777;
+    line-height: 1.5;
+}
+
+/* Hover item dropdown cấp 1: nền xám + chữ đỏ */
+.dropdown > li:hover > a {
+    background: #f5f5f5;
+    color: #d62828;
+}
+
+/* ================== SUB MENU ============ */
+
+.sub-menu {
+    display: none; /* Ẩn mặc định */
+    position: absolute;
+    top: 0; /* Ngang hàng với mục cha */
+    left: 100%; /* Sang bên phải mục cha */
+    background: #ffffff;
+    border: 0.0625rem solid #dddddd;
+    min-width: 12.5rem; /* 200px */
+    z-index: 200;
+}
+
+/* Hiện dropdown cấp 2 khi hover vào li tương ứng trong dropdown cấp 1 */
+.dropdown > li:hover > .sub-menu {
+    display: block;
+}
+
+/* Mỗi item trong sub menu */
+.sub-menu > li > a {
+    display: block;
+    padding: 0.5rem 0.625rem; /* 8px top/bottom, 10px left/right */
+    font-size: 0.875rem; /* 14px */
+    color: #333333;
+}
+
+/* Hover item sub menu */
+.sub-menu > li:hover > a {
+    background: #f5f5f5;
+    color: #d62828;
+}
