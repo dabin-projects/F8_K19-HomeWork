@@ -1,8 +1,9 @@
-/* ===== RESET ======= */
+/* ===== RESET CSS ======= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none; /* xóa dấu chấm của thẻ <ul> */
 }
 
 body {
@@ -25,7 +26,7 @@ a {
     background-color: #ffffff;
     border-bottom: 0.08rem solid #dddddd;
     max-width: 75rem; /* Chiều rộng tối đa: 1200px */
-    margin: 0 auto;
+    margin: 0 auto; /* căn giữa header */
     vertical-align: middle;
 }
 
