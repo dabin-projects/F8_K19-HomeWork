@@ -76,6 +76,7 @@ body {
     z-index: 200;
 }
 
+/* Khi check thì btn Tư vấn ngay tắt đi */
 #modal-toggle:checked ~ .page {
     display: none;
 }
