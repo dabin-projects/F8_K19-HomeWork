@@ -1,0 +1,184 @@
+/* ===== RESET CSS ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.container {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    border: 2px solid red;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    background-color: #6c8ebf;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =============================================
+   CONTAINER 1
+   3 box ngang | 1 trái – 2 giữa – 3 phải
+   Tất cả căn giữa theo chiều dọc và khoảng cách chia đều
+   ============================================= */
+.n1 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =============================================
+   CONTAINER 2
+   3 box ngang | 2 trái – 2 giữa – 1 phải
+   Tất cả căn giữa theo chiều dọc và thứ tự: 3 - 2 - 1 và khoảng cách đều
+   ============================================= */
+.n2 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =============================================
+   CONTAINER 3
+   3 box dọc | 1 - 2 - 3
+   Box căn giữa chiều ngang - khoảng cách không đều nhau
+   ============================================= */
+.n3 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.box3-1 {
+    margin-bottom: 20px;
+}
+.box3-2 {
+    margin-bottom: 50px;
+}
+
+/* =============================================
+   CONTAINER 4
+   3 box ngang | 1 - 2 - 3
+   Tất cả box nằm giữa container - khoảng cách không đều
+   ============================================= */
+.n4 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box4-1 {
+    margin-right: 10px;
+}
+.box4-2 {
+    margin-right: 40px;
+}
+
+/* =============================================
+   CONTAINER 5
+   3 box dọc | 3-2-1
+   Tất cả box nằm giữa container - box sát nhau
+   ============================================= */
+.n5 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =============================================
+   CONTAINER 6
+   3 box ngang | 1-2-3
+   Tất cả box sát mép trên conatainer - box 1 trái + box 2 giữa + box 3 phải
+   ============================================= */
+.n6 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.n6 .box {
+    margin-top: 20px;
+}
+
+/* =============================================
+   CONTAINER 7
+   3 box dọc | 1-2-3
+   Tất cả căn giữa theo chiều ngang - khoảng cách không đều
+   ============================================= */
+.n7 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.box7-1 {
+    margin-bottom: 60px;
+}
+.box7-2 {
+    margin-bottom: 20px;
+}
+
+/* =============================================
+   CONTAINER 8
+   3 box ngang | 1-2-3
+   Tất cả căn giữa theo chiều dọc - box 1 sát mép trái - 2 giữa - 3 sát mép phải
+   ============================================= */
+.n8 {
+    flex-direction: row;
+    align-items: center;
+}
+.box8-2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =============================================
+   CONTAINER 9
+   3 box ngang | 1-2-3
+   Tất cả căn giữa theo chiều ngang - khoảng cách đều nhau
+   Box 1 cao hơn - box 2 giữa dọc - box 3 thấp xuống
+   ============================================= */
+.n9 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.box9-2 {
+    margin-top: 30px;
+}
+.box9-3 {
+    margin-top: 60px;
+}
+
+/* =============================================
+   CONTAINER 10
+   3 box trong cùng 1 container flex | 1-2-3
+   Box 1 góc trái trên - box 2 giữa container - box 3 phải dưới
+   ============================================= */
+.n10 {
+    flex-direction: row;
+}
+.box10-1 {
+    margin-bottom: auto;
+}
+
+/* Box 2: chính giữa cả ngang + dọc → margin auto 4 phía */
+.box10-2 {
+    margin: auto;
+}
+
+.box10-3 {
+    margin-top: auto;
+}
