@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ebf5fe;
+    color: #666666;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+}
+.card {
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    width: calc((100% - 40px) / 3);
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+/* ---------- Icon Container ---------- */
+.card-header .icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mdi {
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 1;
+}
+
+/* ---------- Card Header (bao gồm cả icon và title) ---------- */
+.card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* căn giữa dọc icon và title */
+    gap: 16px; /* khoảng cách giữa icon và title */
+    margin-bottom: 15px;
+}
+
+/* ---------- Card Title ---------- */
+.card-title {
+    max-width: 120px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.3;
+    margin-top: 20px;
+    margin-top: 15px;
+    display: flex;
+}
+/* ---------- Card Content ---------- */
+
+.card-content {
+    font-size: 15px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1; /* đẩy Learn More xuống cuối */
+}
+
+/* ---------- Card Link ---------- */
+.card-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2196f3;
+    text-decoration: none;
+}
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* --------- Card Hover ----------
+Khi hover vào thẻ:
+
+Border color: Đổi sang màu tương ứng với màu icon của thẻ đó
+
+Border width: Tăng lên 3px */
+
+.card-01:hover {
+    border: 3px solid #ff6b6b;
+}
+.card-02:hover {
+    border: 3px solid #4ecdc4;
+}
+.card-03:hover {
+    border: 3px solid #f9a825;
+}
+.card-04:hover {
+    border: 3px solid #5e9cff;
+}
+.card-05:hover {
+    border: 3px solid #9b59b6;
+}
+.card-06:hover {
+    border: 3px solid #7cb342;
+}
