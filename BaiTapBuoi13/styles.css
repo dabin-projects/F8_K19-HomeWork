@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    height: 100%;
+}
+
+.strips-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.strip-item {
+    position: relative;
+    display: flex;
+    flex: 1;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+/* Background cho từng strip */
+.strip-01-relax {
+    background-color: forestgreen;
+}
+.strip-02-explore {
+    background-color: khaki;
+}
+.strip-03-travel {
+    background-color: dodgerblue;
+}
+.strip-04-achieve {
+    background-color: orange;
+}
+.strip-05-dare {
+    background-color: violet;
+}
+
+/* Title */
+.strip-title {
+    font-weight: 900;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Giúp ảnh không bị méo */
+    opacity: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+}
+
+.strip-item:hover {
+    flex: 5; /* Mở rộng strip được hover, đẩy các strip khác thu nhỏ lại */
+}
+.strip-item:hover img,
+.strip-item:hover .overlay {
+    opacity: 1;
+}
+.strip-item:hover .strip-title {
+    opacity: 0; /* Ẩn tiêu đề khi đang xem ảnh */
+}
