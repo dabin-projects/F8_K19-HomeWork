@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css" />
+        <!-- Material Design Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+        />
+    </head>
+    <body>
+        <!-- CHECKBOX -->
+        <input type="checkbox" id="menu-toggle" />
+
+        <!-- OVERLAY -->
+        <label for="menu-toggle" class="overlay"></label>
+
+        <!-- HEADER -->
+        <header>
+            <a href="#" class="header__logo">My Website</a>
+
+            <!-- Desktop nav -->
+            <nav class="header__nav">
+                <label for="menu-toggle" class="nav__close-btn">
+                    <span class="mdi mdi-close"></span>
+                </label>
+
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Link 1</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Link 2</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Link 3</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Hamburger -->
+            <label class="header__hamburger" for="menu-toggle">
+                <span class="mdi mdi-menu"></span>
+            </label>
+
+            <!--  Nav Sidebar -->
+            <nav class="nav__sidebar">
+                <label class="nav__close-btn" for="menu-toggle">
+                    <span class="mdi mdi-close"></span>
+                </label>
+                <ul class="nav__list nav__list--sidebar">
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Link 1</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Link 2</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Link 3</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main class="main">
+            <div class="container">
+                <!-- CONTENT -->
+                <section class="container__content">
+                    <h1 class="container__heading">This is the main heading</h1>
+                    <p class="container__body">
+                        Veggies es bonus vobis, proinde vos postulo essum magis
+                        kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+                        melon azuki bean garlic.
+                    </p>
+                    <p class="container__body">
+                        Gumbo beet greens corn soko endive gumbo gourd. Parsley
+                        shallot courgette tatsoi pea sprouts fava bean collard
+                        greens dandelion okra wakame tomato. Dandelion cucumber
+                        earthnut pea peanut soko zucchini.
+                    </p>
+
+                    <!-- CARDS -->
+                    <div class="cards">
+                        <article class="card">
+                            <h2 class="card__header">Card One</h2>
+                            <div class="card__body">
+                                Turnip greens yarrow ricebean rutabaga endive
+                                cauliflower sea lettuce kohlrabi amaranth water
+                                spinach avocado.
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <h2 class="card__header">Card Two</h2>
+                            <div class="card__body">
+                                Daikon napa cabbage asparagus winter purslane
+                                kale. Celery potato scallion desert raisin
+                                horseradish spinach carrot soko.
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <h2 class="card__header">Card Three</h2>
+                            <div class="card__body">
+                                Lotus root water spinach fennel kombu maize
+                                bamboo shoot green bean swiss chard seakale
+                                pumpkin onion chickpea gram corn pea.
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <h2 class="card__header">Card Four</h2>
+                            <div class="card__body">
+                                Lotus root water spinach fennel kombu maize
+                                bamboo shoot green bean swiss chard seakale
+                                pumpkin onion chickpea gram corn pea.
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <h2 class="card__header">Card Five</h2>
+                            <div class="card__body">
+                                Nori grape silver beet broccoli kombu beet
+                                greens fava bean potato quandong celery. Bunya
+                                nuts black-eyed pea prairie turnip leek lentil
+                                turnip greens parsnip.
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- SIDEBAR -->
+                <aside class="container__sidebar">
+                    <div class="widget">
+                        <p class="widget__text">
+                            Have you discovered all of the other excellent
+                            content on this website?
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </body>
+</html>

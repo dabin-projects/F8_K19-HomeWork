@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background: #e0e0e0;
+    color: #222;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+/* ====== HEADER ==== */
+
+header {
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__logo {
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-style: italic;
+    z-index: 1001; /* Đảm bảo logo luôn trên cùng */
+    position: relative;
+}
+/* Hamburger */
+.header__hamburger {
+    display: none; /* Ẩn ở desktop */
+    cursor: pointer;
+    z-index: 1000;
+    color: #fff;
+}
+
+.header__hamburger .mdi {
+    font-size: 28px;
+}
+
+/* Desktop Nav */
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+.nav__list {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+}
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+/* =========== SIDEBAR NAV ========= */
+.nav__sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Ẩn */
+    width: 300px;
+    height: 100vh;
+    background-color: #3a3a3a;
+    z-index: 1000;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav__close-btn {
+    display: none; /* Ẩn ở desktop */
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+.nav__close-btn:hover {
+    transform: rotate(90deg);
+}
+
+.nav__list--sidebar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav__list--sidebar .nav__link {
+    display: block;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.nav__list--sidebar .nav__link:hover {
+    text-decoration: underline;
+}
+
+/* ========== MAIN =========== */
+.main {
+    padding: 1.5rem 0;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.container__content {
+    flex: 1;
+}
+.container__heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.container__body {
+    margin-bottom: 1.5rem;
+}
+
+.container__sidebar {
+    background: #3a3a3a;
+    min-height: 400px;
+    width: 300px;
+    color: #fff;
+    padding: 1.5rem;
+}
+
+/* ========== CARD LAYOUT =========== */
+
+.cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.card {
+    width: calc((100% - 2rem) / 3);
+    border: solid 1px #3a3a3a;
+    background: #fff;
+}
+
+.card__header {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    background: #3a3a3a;
+    color: #fff;
+    text-align: left;
+}
+
+.card__body {
+    padding: 1.5rem;
+}
+
+/* ====== OVERLAY & CHECKBOX LOGIC ==== */
+
+/* CHECKBOX HACK */
+#menu-toggle {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    z-index: 998;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    cursor: pointer;
+}
+
+/* ====== RESPONSIVE ==== */
+
+/* Responsive: Tablet (≤ 768px) */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    .header__nav {
+        display: none;
+    }
+
+    /* Hiển thị Hamburger */
+    .header__hamburger {
+        display: block;
+    }
+    .nav__sidebar {
+        display: flex;
+        right: -300px;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+    /* Checkbox logic */
+    #menu-toggle:checked ~ header .nav__sidebar {
+        right: 0;
+    }
+    #menu-toggle:checked ~ header .nav__link {
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #menu-toggle:checked ~ .overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    #menu-toggle:checked ~ header .nav__close-btn {
+        display: block;
+    }
+    .container__sidebar {
+        width: 250px;
+    }
+
+    .card {
+        width: calc((100% - 1rem) / 2);
+    }
+    .cards {
+        gap: 1rem;
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* Responsive: Mobile (≤ 480px) */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .container__sidebar {
+        max-width: 100%;
+    }
+
+    /* Cards: 1 cột */
+    .card {
+        width: 100%;
+    }
+    .nav__sidebar {
+        right: -280px;
+        width: 280px;
+        padding: 2rem 1.5rem;
+    }
+    .nav__item {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(65, 138, 129, 0.1);
+    }
+    #menu-toggle:checked ~ header .nav__sidebar {
+        right: 0;
+    }
+}
