@@ -46,15 +46,6 @@
       "status": "Pending"
     },
     {
-      "id": "CUST-06",
-      "companyName": "Nông sản Sạch Miền Tây",
-      "email": "nongsanmientay@vn.net",
-      "phone": "0292333444",
-      "address": "Ninh Kiều, Cần Thơ",
-      "taxId": "018381123419",
-      "status": "Active"
-    },
-    {
       "id": "CUST-007",
       "companyName": "Công ty kiến trúc",
       "email": "designcompany@email.com",
@@ -80,6 +71,15 @@
       "address": "Ha Noi",
       "status": "Active",
       "id": "jGZkhiXN9js"
+    },
+    {
+      "id": "PO0gk3q4cag",
+      "companyName": "Công ty TNHH Một mình tôi",
+      "email": "dabin@company.com",
+      "phone": "0987654320",
+      "taxId": "0183811234986",
+      "address": "Cầu Giấy, Hà Nội",
+      "status": "Active"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
