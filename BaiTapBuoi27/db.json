@@ -1,0 +1,86 @@
+{
+  "customers": [
+    {
+      "id": "CUST-001",
+      "companyName": "Cty TNHH F8 ",
+      "email": "contact@f8.edu.vn",
+      "phone": "0987654321",
+      "taxId": "018381123412",
+      "address": "Cổ Nhuế, Hà Nội",
+      "status": "Active"
+    },
+    {
+      "id": "CUST-002",
+      "companyName": "Cty Cổ Phần F9",
+      "email": "info@f9-corp.vn",
+      "phone": "0912345678",
+      "address": "Mỹ Đình, Hà Nội",
+      "taxId": "018381123413",
+      "status": "Active"
+    },
+    {
+      "id": "CUST-003",
+      "companyName": "Công ty TNHH ABC",
+      "email": "company@abc.vn",
+      "phone": "09998899888",
+      "address": "Quận 2, TP HCM",
+      "taxId": "018381123415",
+      "status": "Inactive"
+    },
+    {
+      "id": "CUST-004",
+      "companyName": "Công ty IT",
+      "email": "contact@xyz.com",
+      "phone": "0198766445",
+      "address": "Ba Đình, Hà Nội",
+      "taxId": "018381123416",
+      "status": "Active"
+    },
+    {
+      "id": "CUST-005",
+      "companyName": "Công ty giấy ăn",
+      "email": "silkcost@gmail.com",
+      "phone": "080766478",
+      "address": "Lê Chân, Hải Phòng",
+      "taxId": "018381123418",
+      "status": "Pending"
+    },
+    {
+      "id": "CUST-06",
+      "companyName": "Nông sản Sạch Miền Tây",
+      "email": "nongsanmientay@vn.net",
+      "phone": "0292333444",
+      "address": "Ninh Kiều, Cần Thơ",
+      "taxId": "018381123419",
+      "status": "Active"
+    },
+    {
+      "id": "CUST-007",
+      "companyName": "Công ty kiến trúc",
+      "email": "designcompany@email.com",
+      "phone": "01022005566",
+      "address": "Lê Chân, Hải Phòng",
+      "taxId": "018381123410",
+      "status": "Inactive"
+    },
+    {
+      "id": "CUST-008",
+      "companyName": "Công ty công nghệ 123",
+      "email": "itcompany@email.com",
+      "phone": "0908765432",
+      "address": "Tân Bình, TP. HCM",
+      "taxId": "018381123423",
+      "status": "Active"
+    },
+    {
+      "companyName": "Công ty tôi",
+      "email": "contact@company.com",
+      "phone": "0934461600",
+      "taxId": "018381123499",
+      "address": "Ha Noi",
+      "status": "Active",
+      "id": "jGZkhiXN9js"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
